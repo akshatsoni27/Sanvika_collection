@@ -1,0 +1,214 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Sanvika Collection design system.
+ * Ivory canvas, burgundy brand colour, muted gold detailing, charcoal text.
+ * All colours are oklch semantic tokens — never hardcode colours in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --background: oklch(0.977 0.008 84);
+  --foreground: oklch(0.26 0.012 60);
+
+  --card: oklch(0.992 0.004 84);
+  --card-foreground: oklch(0.26 0.012 60);
+  --popover: oklch(0.992 0.004 84);
+  --popover-foreground: oklch(0.26 0.012 60);
+
+  /* Burgundy */
+  --primary: oklch(0.4 0.128 16);
+  --primary-foreground: oklch(0.98 0.008 84);
+
+  --secondary: oklch(0.945 0.012 84);
+  --secondary-foreground: oklch(0.3 0.02 40);
+
+  --muted: oklch(0.95 0.01 84);
+  --muted-foreground: oklch(0.52 0.018 60);
+
+  --accent: oklch(0.93 0.02 70);
+  --accent-foreground: oklch(0.3 0.02 40);
+
+  /* Muted gold */
+  --gold: oklch(0.74 0.084 78);
+  --gold-foreground: oklch(0.26 0.012 60);
+
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0.008 84);
+
+  --border: oklch(0.9 0.012 78);
+  --input: oklch(0.9 0.012 78);
+  --ring: oklch(0.4 0.128 16);
+
+  --sidebar: oklch(0.985 0.006 84);
+  --sidebar-foreground: oklch(0.26 0.012 60);
+  --sidebar-primary: oklch(0.4 0.128 16);
+  --sidebar-primary-foreground: oklch(0.98 0.008 84);
+  --sidebar-accent: oklch(0.945 0.012 84);
+  --sidebar-accent-foreground: oklch(0.3 0.02 40);
+  --sidebar-border: oklch(0.9 0.012 78);
+  --sidebar-ring: oklch(0.4 0.128 16);
+}
+
+.dark {
+  --background: oklch(0.19 0.012 40);
+  --foreground: oklch(0.96 0.008 84);
+  --card: oklch(0.23 0.014 40);
+  --card-foreground: oklch(0.96 0.008 84);
+  --popover: oklch(0.23 0.014 40);
+  --popover-foreground: oklch(0.96 0.008 84);
+  --primary: oklch(0.62 0.14 18);
+  --primary-foreground: oklch(0.98 0.008 84);
+  --secondary: oklch(0.27 0.015 40);
+  --secondary-foreground: oklch(0.96 0.008 84);
+  --muted: oklch(0.27 0.015 40);
+  --muted-foreground: oklch(0.72 0.015 70);
+  --accent: oklch(0.3 0.02 50);
+  --accent-foreground: oklch(0.96 0.008 84);
+  --gold: oklch(0.78 0.09 78);
+  --gold-foreground: oklch(0.19 0.012 40);
+  --destructive: oklch(0.62 0.19 27);
+  --destructive-foreground: oklch(0.98 0.008 84);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.14 18);
+  --sidebar: oklch(0.23 0.014 40);
+  --sidebar-foreground: oklch(0.96 0.008 84);
+  --sidebar-primary: oklch(0.62 0.14 18);
+  --sidebar-primary-foreground: oklch(0.98 0.008 84);
+  --sidebar-accent: oklch(0.27 0.015 40);
+  --sidebar-accent-foreground: oklch(0.96 0.008 84);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.62 0.14 18);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    transition: color 180ms ease, opacity 180ms ease, background-color 180ms ease,
+      border-color 180ms ease, transform 180ms ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility hairline {
+  &::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 1px;
+    margin-top: 1rem;
+    background: var(--color-gold);
+  }
+}
+
+@utility fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility luxury-button {
+  @apply inline-flex items-center justify-center gap-2 border border-transparent px-6 py-3 text-[0.68rem] tracking-[0.22em] uppercase transition-all duration-200;
+}
+
+@utility luxury-outline {
+  @apply border border-foreground/15 bg-transparent text-foreground hover:border-primary hover:text-primary;
+}
+
+@utility editorial-panel {
+  @apply border border-border/80 bg-card;
+}
+
+@utility grain {
+  background-image: radial-gradient(circle at top, rgba(120, 83, 50, 0.08), transparent 60%);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
