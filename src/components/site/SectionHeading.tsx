@@ -22,13 +22,24 @@ export function SectionHeading({
       }
     >
       <div>
-        {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-        <h2 className="mt-3 font-display text-3xl sm:text-4xl">{title}</h2>
+        {eyebrow && (
+          <div className={`flex items-center gap-2 ${centered ? "justify-center" : ""}`}>
+            <span className="h-px w-6 bg-[#c59b4e]/60" />
+            <p className="eyebrow">{eyebrow}</p>
+            <span className="h-px w-6 bg-[#c59b4e]/60" />
+          </div>
+        )}
+        <h2 className={`mt-3 font-display text-3xl text-foreground sm:text-4xl lg:text-5xl font-light tracking-tight ${centered ? "hairline-center" : "hairline"}`}>
+          {title}
+        </h2>
         {description && (
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base font-light">
+            {description}
+          </p>
         )}
       </div>
       {action}
     </div>
   );
 }
+

@@ -16,7 +16,7 @@ export const siteConfig = {
 
   phoneDisplay: "+91 97555 37777",
   email: "hello@sanvikacollection.in",
-  location: "Shop No. 12, Laxmi Market, Pune, Maharashtra 411001",
+  location: "702, Surbhi Heights Near Abhinav Homes Phase 2 Ayodhya Bypass Road, Bhopal",
   hours: "Monday – Saturday · 10:00 AM – 8:00 PM",
 
   currency: "₹",
