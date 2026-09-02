@@ -51,7 +51,7 @@ export function Navbar() {
             Sanvika
           </span>
           <span className="mt-1 text-[0.55rem] font-semibold tracking-[0.38em] uppercase text-[#c59b4e]">
-            Collection • Haute Couture
+            Collection • Bhopal
           </span>
         </Link>
 
