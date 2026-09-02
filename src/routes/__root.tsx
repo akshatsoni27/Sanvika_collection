@@ -8,10 +8,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { FloatingContact } from "@/components/site/FloatingContact";
@@ -41,11 +40,7 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
-  const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+  console.error("Application Error:", error);
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center bg-background px-4">
@@ -78,11 +73,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${siteConfig.name} — Premium Indian Ethnic Wear` },
+      { title: `${siteConfig.name} — Luxury Indian Ethnic Wear` },
       { name: "description", content: siteConfig.description },
       { property: "og:site_name", content: siteConfig.name },
+      { property: "og:title", content: `${siteConfig.name} — ${siteConfig.tagline}` },
+      { property: "og:description", content: siteConfig.description },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: `${siteConfig.name} — Luxury Ethnic Wear Couture` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: `${siteConfig.name} — ${siteConfig.tagline}` },
+      { name: "twitter:description", content: siteConfig.description },
+      { name: "twitter:image", content: "/og-image.jpg" },
+      { name: "theme-color", content: "#520b18" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -92,7 +97,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
     ],
   }),
   shellComponent: RootShell,
