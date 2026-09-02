@@ -95,7 +95,7 @@ function ContactPage() {
           <p className="mt-3 text-xs font-light text-foreground leading-relaxed">{siteConfig.hours}</p>
           {siteConfig.location && (
             <a
-              href="https://maps.google.com/?q=Shop+No.+12,+Laxmi+Market,+Pune,+Maharashtra+411001"
+              href="https://www.google.com/maps/place/SURBHI+HEIGHTS/@23.2698475,77.470271,17.17z/data=!4m15!1m8!3m7!1s0x3bc2c068d9bc194f:0xb8f08d935460d067!2s12,+Laxmi+Rd,+Kapad+Ganj,+Streat,+Tulshibaug,+Budhwar+Peth,+Pune,+Maharashtra+411002!3b1!8m2!3d18.5160136!4d73.8604005!16s%2Fg%2F11xspggvgd!3m5!1s0x397c6b244cd51a37:0xbd0c5d9324c1579b!8m2!3d23.2707827!4d77.4706421!16s%2Fg%2F11gjs_f435?entry=ttu&g_ep=EgoyMDI2MDgzMS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
               className="luxury-outline mt-6 w-full text-center"
@@ -122,7 +122,7 @@ function ContactPage() {
               </div>
             </div>
             <a
-              href="https://maps.google.com/?q=Shop+No.+12,+Laxmi+Market,+Pune,+Maharashtra+411001"
+              href="https://www.google.com/maps/place/SURBHI+HEIGHTS/@23.2698475,77.470271,17.17z/data=!4m15!1m8!3m7!1s0x3bc2c068d9bc194f:0xb8f08d935460d067!2s12,+Laxmi+Rd,+Kapad+Ganj,+Streat,+Tulshibaug,+Budhwar+Peth,+Pune,+Maharashtra+411002!3b1!8m2!3d18.5160136!4d73.8604005!16s%2Fg%2F11xspggvgd!3m5!1s0x397c6b244cd51a37:0xbd0c5d9324c1579b!8m2!3d23.2707827!4d77.4706421!16s%2Fg%2F11gjs_f435?entry=ttu&g_ep=EgoyMDI2MDgzMS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
               className="luxury-button"
